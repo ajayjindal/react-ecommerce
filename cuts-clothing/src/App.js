@@ -1,6 +1,6 @@
 import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
-import { Route, Routes } from "react-router";
+import { Route } from "react-router";
 const HatsPage = () => (
     <div>
         <h1>HATS PAGE</h1>
@@ -10,10 +10,8 @@ const HatsPage = () => (
 function App() {
     return (
         <div>
-            <Routes>
-                <Route exact path="/" element={<HomePage />} />
-                <Route path="hats" element={<HatsPage />} />
-            </Routes>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/shop/hats" component={HatsPage} />
         </div>
     );
 }
